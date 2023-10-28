@@ -40,13 +40,13 @@ The time complexity is $\pmb{O(N\lfloor\frac{N}{\varepsilon}\rfloor\sum{S_i})}$.
 
 $\pmb{v_{ij}'=\lfloor\frac{v_{ij}}{K}\rfloor}$
 
-$\pmb{\Longrightarrow\frac{v_{ij}}{K}-1<v_{ij}'}$
+$\pmb{\Longrightarrow\frac{v_{ij}}{K}-1 < v_{ij}'}$
 
-$\pmb{\Longrightarrow v_{ij}-K<Kv_{ij}'}$
+$\pmb{\Longrightarrow v_{ij}-K < Kv_{ij}'}$
 
 Let $\pmb{\{x_{ij}\in\{0,1\}\}}$ denote the optimal solution of the primal problem.
 
-$\pmb{\Longrightarrow\sum{x_{ij}v_{ij}}-NK<K\sum{x_{ij}v_{ij}'}}$
+$\pmb{\Longrightarrow\sum{x_{ij}v_{ij}}-NK < K\sum{x_{ij}v_{ij}'}}$
 
 Let $\pmb{\{x_{ij}'\in\{0,1\}\}}$ denote the optimal solution of the value-scaled problem.
 
@@ -56,10 +56,10 @@ Let $\pmb{OPT=\sum{x_{ij}v_{ij}}}$ denote the optimal value of the primal proble
 
 $\pmb{K=\frac{\varepsilon P}{N}}$
 
-$\pmb{\Longrightarrow OPT-\varepsilon P<K\sum{x_{ij}'v_{ij}'}}$
+$\pmb{\Longrightarrow OPT-\varepsilon P < K\sum{x_{ij}'v_{ij}'}}$
 
 $\pmb{P=\max{v_{ij}}\le OPT}$
 
-$\pmb{\Longrightarrow (1-\varepsilon)OPT<K\sum{x_{ij}'v_{ij}'}}$
+$\pmb{\Longrightarrow (1-\varepsilon)OPT < K\sum{x_{ij}'v_{ij}'}}$
 
-Thus, it is proved that the approximate optimal value $\pmb{OPT'=K\sum{x_{ij}'v_{ij}'}>(1-\varepsilon)OPT}$
+Thus, it is proved that the approximate optimal value $\pmb{OPT'=K\sum{x_{ij}'v_{ij}'} > (1-\varepsilon)OPT}$

@@ -38,6 +38,8 @@ There are two different ideas about constructing $\pmb{F}$.
 
 The time complexity is $\pmb{O(N\lfloor\frac{N}{\varepsilon}\rfloor\sum{S_i})}$.
 
+The proof is as follows.
+
 $\pmb{v_{ij}'=\lfloor\frac{v_{ij}}{K}\rfloor}$
 
 $\pmb{\Longrightarrow\frac{v_{ij}}{K}-1 < v_{ij}'}$

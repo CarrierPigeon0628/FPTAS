@@ -44,11 +44,11 @@ $\pmb{\Longrightarrow\frac{v_{ij}}{K}-1<v_{ij}'}$
 
 $\pmb{\Longrightarrow v_{ij}-K<Kv_{ij}'}$
 
-Let $\pmb{\left\{x_{ij}\in\left\{0,1\right\}\right\}}$ denote the optimal solution of the primal problem.
+Let $\pmb{\{x_{ij}\in\{0,1\}\}}$ denote the optimal solution of the primal problem.
 
 $\pmb{\Longrightarrow\sum{x_{ij}v_{ij}}-NK<K\sum{x_{ij}v_{ij}'}}$
 
-Let $\pmb{\left\{x_{ij}'\in\left\{0,1\right\}\right\}}$ denote the optimal solution of the value-scaled problem.
+Let $\pmb{\{x_{ij}'\in\{0,1\}\}}$ denote the optimal solution of the value-scaled problem.
 
 $\pmb{\Longrightarrow\sum{x_{ij}v_{ij}'}\le\sum{x_{ij}'v_{ij}'}}$
 

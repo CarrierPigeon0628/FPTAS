@@ -22,11 +22,11 @@ for i in range(N):
     v.append(vi)
     w.append(wi)
     x.append([0] * S[-1])
-print("N =", N)
-print("V =", V)
-print("S =", S)
-print("v =", v)
-print("w =", w)
+# print("N =", N)
+# print("V =", V)
+# print("S =", S)
+# print("v =", v)
+# print("w =", w)
 
 # FPTAS
 st = time.perf_counter()
@@ -42,12 +42,12 @@ for i in range(N):
                 sol[i][j] = k + 1
 for j in range(N * int(N / e), -1, -1):
     if dp[j] <= V:
-        print("opt =", j * e * P / N)
+        # print("opt =", j * e * P / N)
         break
 for i in range(N - 1, -1, -1):
     if sol[i][j] > 0:
         x[i][sol[i][j] - 1] = 1
         j -= v[i][sol[i][j] - 1]
-print("x =", x)
+# print("x =", x)
 et = time.perf_counter()
 print(et - st)

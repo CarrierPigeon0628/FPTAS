@@ -21,14 +21,32 @@ int main()
 		S[i] = 20;  // for testing
 		vector<double> vi(S[i]), wi(S[i]);
 		vector<int> xi(S[i], 0);
-		for (int j = 0; j < S[i]; j++) {
-			vi[j] = (rand() % 9999 + 1) / 100.0;
-			wi[j] = (rand() % 9999 + 1) / 100.0;
-		}
 		v[i] = vi;
 		w[i] = wi;
 		x[i] = xi;
+		for (int j = 0; j < S[i]; j++) {
+			v[i][j] = (rand() % 9999 + 1) / 100.0;
+			w[i][j] = (rand() % 9999 + 1) / 100.0;
+		}
 	}
+//	cout << "N = " << N << endl;
+//	cout << "V = " << V << endl;
+//	cout << "S = ";
+//	for (int i = 0; i < N; i++)
+//		cout << S[i] << ' ';
+//	cout << endl;
+//	for (int i = 0; i < N; i++) {
+//		cout << (i == 0 ? "v = " : "    ");
+//		for (int j = 0; j < S[i]; j++)
+//			cout << v[i][j] << ' ';
+//		cout << endl;
+//	}
+//	for (int i = 0; i < N; i++) {
+//		cout << (i == 0 ? "w = " : "    ");
+//		for (int j = 0; j < S[i]; j++)
+//			cout << w[i][j] << ' ';
+//		cout << endl;
+//	}
 	
 	// FPTAS
 	clock_t st = clock();
@@ -55,13 +73,21 @@ int main()
 	}
 	int opt;
 	for (opt = N * int(N / e); opt >= 0; opt--)
-		if (dp[opt] <= V)
+		if (dp[opt] <= V) {
+//			cout << "opt = " << opt * e * P / N << endl;
 			break;
+		}
 	for (int i = N - 1, j = opt; i >= 0; i--)
 		if (sol[i][j] > 0) {
 			x[i][sol[i][j] - 1] = 1;
 			j -= v[i][sol[i][j] - 1];
 		}
+//	for (int i = 0; i < N; i++) {
+//		cout << (i == 0 ? "x = " : "    ");
+//		for (int j = 0; j < S[i]; j++)
+//			cout << x[i][j] << ' ';
+//		cout << endl;
+//	}
 	clock_t et = clock();
 	cout << 1.0 * (et - st) / CLOCKS_PER_SEC << endl;
 	return 0;

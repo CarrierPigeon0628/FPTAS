@@ -10,13 +10,15 @@ int main()
 	double e = 0.01;
 	
 	// Generate a sample.
-	int N = 20;
+//	int N = rand() % 100 + 1;
+	int N = 20;  // for testing
 	double V = (rand() % 9999 + 1) / 100.0;
 	vector<int> S(N);
 	vector<vector<double>> v(N), w(N);
 	vector<vector<int>> x(N);
 	for (int i = 0; i < N; i++) {
-		S[i] = 20;
+//		S[i] = rand() % 100 + 1;
+		S[i] = 20;  // for testing
 		vector<double> vi(S[i]), wi(S[i]);
 		vector<int> xi(S[i], 0);
 		for (int j = 0; j < S[i]; j++) {

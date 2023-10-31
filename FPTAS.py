@@ -22,11 +22,11 @@ for i in range(N):
     v.append(vi)
     w.append(wi)
     x.append([0] * S[-1])
-print("N =", N)
-print("V =", V)
-print("S =", S)
-print("v =", v)
-print("w =", w)
+# print("N =", N)
+# print("V =", V)
+# print("S =", S)
+# print("v =", v)
+# print("w =", w)
 
 # FPTAS
 st = time.perf_counter()
@@ -46,12 +46,12 @@ for i in range(N):
         dp[i + 1, v_temp: vm] = np.minimum(dp[i + 1, v_temp: vm], dp[i, 0: vm - v_temp] + w_temp)
 for j in range(vm - 1, -1, -1):
     if dp[N, j] <= V:
-        print("opt =", K * j)
+        # print("opt =", K * j)
         break
 for i in range(N - 1, -1, -1):
     if sol[i, j] > 0:
         x[i][sol[i, j] - 1] = 1
         j -= v[i][sol[i, j] - 1]
-print("x =", x)
+# print("x =", x)
 et = time.perf_counter()
 print(et - st)
